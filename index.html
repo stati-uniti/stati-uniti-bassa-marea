@@ -21,11 +21,11 @@
   --text-muted: #6B6560;
 }
 
-html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+html { scroll-behavior: smooth; }
 body { font-family: 'Josefin Sans', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
 
 /* SECTIONS */
-section { scroll-snap-align: start; min-height: 100vh; width: 100%; }
+section { min-height: 100vh; width: 100%; }
 html, body { width: 100%; }
 
 /* ── STEP 1 · HERO ── */
@@ -347,7 +347,7 @@ footer {
   padding: 5rem 2rem 3rem;
   display: flex; flex-direction: column;
   align-items: center; gap: 3rem;
-  scroll-snap-align: start;
+  
 }
 .footer-logo { width: 80px; filter: none; opacity: 1; }
 .footer-links {
@@ -853,7 +853,7 @@ footer {
   color: rgba(255,255,255,0.5);
   padding: 0;
   display: block;
-  scroll-snap-align: start;
+  
 }
 .footer-top {
   display: grid;
@@ -947,8 +947,11 @@ footer {
 
 @media(max-width: 768px) {
   .footer-top { grid-template-columns: 1fr; padding: 3rem 2rem 2rem; gap: 2rem; }
-  .footer-bottom { padding: 1.5rem 2rem; flex-direction: column; align-items: flex-start; }
-  .footer-copy { text-align: left; }
+  .footer-bottom { padding: 1.5rem 2rem; flex-direction: column; align-items: center; }
+  .footer-copy { text-align: center; }
+  .footer-col { align-items: center; text-align: center; }
+  .footer-text-btn { text-align: center; width: 100%; }
+  .footer-col img { margin: 1.5rem auto 0 !important; display: block !important; }
 }
 
 /* ── PHONE LINKS ── */
